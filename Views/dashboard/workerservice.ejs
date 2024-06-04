@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker Dashboard</title>
+    <link rel="stylesheet" href="/css/workerservice.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <!-- Home Icon -->
+        <div class="home-icon">
+            <a href="/index"><img src="img/dashboard/ion_home.PNG" alt=""></a>
+            <img src="img/capture.PNG" alt="">
+        </div>
+        <!-- User Image and Name -->
+        <div class="part-1">
+            <div class="user-image">
+                <!-- Check if user is logged in and has a profile image -->
+                <% if(user && user.profile_image) { %>
+                    <img src="<%= user.profile_image %>" alt="User Image">
+                    <% } else { %>
+                        <!-- If user is not logged in or has no profile image, display a default image -->
+                        <img src="img/dashboard/usericon2.svg" alt="Default Profile Image">
+                        <% } %>
+            </div>
+            <!-- User Name -->
+            <div class="user-name">
+                <!-- Replace 'John Doe' with the actual user's name -->
+                <p>
+                    <%= user ? user.name: 'Guest' %>
+                </p>
+            </div>
+        </div>
+        <!-- Sidebar Menu -->
+        <div class="sidebar-menu">
+            <ul>
+                <li><a href="/workerprofile">Profile</a></li>
+                <hr> <!-- Separator Line -->
+                <li><a href="/workerchangepassword">Password</a></li>
+                <hr> <!-- Separator Line -->
+                <li><a href="/workerservice">Service request</a></li>
+                <hr> <!-- Separator Line -->
+                <li><a href="#">Active Services</a></li>
+                <hr> <!-- Separator Line -->
+                <li><a href="#">Settings</a></li>
+                <hr> <!-- Separator Line -->
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <h1>User Requests</h1>
+        </div>
+        <div class="request-list">
+            <!-- User requests will be dynamically added here -->
+        </div>
+    </div>
+
+    <script src="/js/workerservice.js"></script>
+</body>
+
+</html>

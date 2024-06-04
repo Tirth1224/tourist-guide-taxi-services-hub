@@ -1,0 +1,519 @@
+/* Reset CSS
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.part-1 {
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 20%;
+    background-color: #B8B8FF;
+    padding: 20px;
+    color: #fff;
+    overflow-y: auto;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+.user-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.home-icon {
+    display: flex;
+    align-items: center;
+}
+
+.home-icon img {
+    height: auto;
+    max-width: 80%;
+    border-radius: 24px;
+    margin-right: 10px;
+    padding: 1px;
+}
+
+.user-image img {
+    width: 150px;
+    height: 150px;
+    padding: 3px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+}
+
+.user-name p {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #000;
+}
+
+.sidebar-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-menu ul li {
+    margin: 15px;
+    text-align: center;
+}
+
+.sidebar-menu ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.1rem;
+    display: block;
+}
+
+.sidebar-menu ul li a:hover {
+    color: #6666ff;
+}
+
+.main-content {
+    margin-left: 22%;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #6666ff;
+    margin-bottom: 20px;
+}
+
+.data-section {
+    margin-bottom: 40px;
+}
+
+.data-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete-button:hover {
+    opacity: 0.9;
+}
+
+
+.data-section {
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+button {
+    background-color: #4CAF50; /* Green 
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 1px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+} */
+
+/* body {
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.sidebar .home-icon a img {
+    width: 24px;
+    height: 24px;
+}
+
+.sidebar .part-1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .part-1 .user-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.sidebar .part-1 .user-name p {
+    margin-top: 10px;
+}
+
+.sidebar .sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar .sidebar-menu ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar .sidebar-menu ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+.data-section {
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+button {
+    background-color: #4CAF50; /* Green 
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 1px;
+    cursor: pointer;
+} 
+
+button:hover {
+    background-color: #45a049;
+}*/
+
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #e0e4ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.sidebar-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-section h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.menu li {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    background-color: #d0d4ff;
+    color: #000;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.content h1 {
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #eee;
+} */
+
+
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #e0e4ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.sidebar-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-section h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.menu li {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    background-color: #d0d4ff;
+    color: #000;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.content h1 {
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #eee;
+} */
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: 0.5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    
+}
+
+.profile-section img {
+    width: 80px;
+    height: 80px;
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+
+.nav-link i {
+    margin-right: 10px;
+}
+
+.inline-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inline-images img {
+    margin: 0 10px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Floating Card Modal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/floatingcardmodal.css" />
+</head>
+
+<body>
+
+    <div id="floatingCardModal" class="floating-card-modal">
+        <div class="floating-card-content">
+            <div><span class="floating-card-close">&times;</span></div>
+            <div id="step1">
+                <form id="taskForm">
+                    <input type="hidden" id="workerId" name="workerId">
+                    <div class="form-group">
+                        <label for="taskDetails">Task Details:</label>
+                        <textarea id="taskDetails" name="taskDetails" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="taskDate">Date:</label>
+                        <input type="date" id="taskDate" name="taskDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="taskTime">Time Slot:</label>
+                        <select id="taskTime" name="taskTime" required>
+                            <option value="">Select Time Slot</option>
+                            <!-- Time slots will be dynamically added here -->
+                        </select>
+                    </div>
+                    <button id="nextStep">Next</button>
+                </form>
+            </div>
+            <div id="step2" style="display: none;">
+                <div class="terms">
+                    <h3>Terms Before Booking:</h3>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="terms-1" name="terms" required>
+                            <label for="terms-1">There must be a minimum visiting fee of 100/- rupees.</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="terms-2" name="terms" required>
+                            <label for="terms-2">Extra charges may apply when the worker comes to analyze the work or if
+                                new items are needed as declared by the worker.</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="terms-3" name="terms" required>
+                            <label for="terms-3">Cancellation charges apply on the day of the appointment.</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="terms-4" name="terms" required>
+                            <label for="terms-4">There will be no charges if the worker cancels the work after accepting
+                                it.</label>
+                        </li>
+                    </ul>
+                </div>
+                <button id="bookService">Book Service</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/floatingcardmodal.js"></script>
+</body>
+
+</html>

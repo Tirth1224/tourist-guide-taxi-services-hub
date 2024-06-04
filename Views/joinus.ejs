@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/joinus.css">
+</head>
+
+<body>
+    <%- include('navbar') %>
+        <div class="container">
+            <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+                <div class=" carousel-indicators">
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"
+                        class="" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"
+                        class=""></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/C1.PNG" alt="" height="825px" width="1290px" class="d-block w-100"
+                            style="border-radius: 57px;">
+                        <div class="container">
+                            <div class="carousel-caption text-center top-caption">
+                                <h1>Example headline.</h1>
+                                <p class="opacity-75">Some representative placeholder content for the first slide of the
+                                    carousel.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="img/c2.PNG" alt="" height="825px" width="1290px" class="d-block w-100"
+                            style="border-radius: 57px;">
+                        <div class="container">
+                            <div class="carousel-caption text-center top-caption">
+                                <h1>Another example headline.</h1>
+                                <p>Some representative placeholder content for the second slide of the carousel.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/c2.PNG" alt="" height="825px" width="1290px" class="d-block w-100"
+                            style="border-radius: 57px;">
+                        <div class="container">
+                            <div class="carousel-caption text-center top-caption">
+                                <h1>One more for good measure.</h1>
+                                <p>Some representative placeholder content for the third slide of this carousel.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="my-5">
+                <div class=" p-5 text-center bg-body-tertiary" style=" border-radius: 32px;">
+                    <div class="container py-5" style="background-color: #B8B8FF; border-radius: 32px;">
+                        <h1 class="text-body-emphasis">2400+ Guides And Taxi-drivers</h1>
+                        <p class="col-lg-8 mx-auto lead">
+                            Provide Employability to more than 2400+ Local Guide and Taxi-drivers
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container px-4 py-5" id="featured-3">
+            <h2 class="pb-2 border-bottom" style="text-align: center;">Why Guide-Wheels ?</h2>
+            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                <div class="feature col">
+                    <div
+                        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                        <img src="img/ion_time-outline.jpg" alt="" height="50px" width="50px" class="d-block w-100">
+                    </div>
+                    <h3 class="fs-2 text-body-emphasis">Flexible Schedules</h3>
+                    <p>Set your own hours and work when it's convenient for you.</p>
+                </div>
+                <div class="feature col">
+                    <div
+                        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                        <img src="img/uiw_pay.jpg" alt="" height="50px" width="50px" class="d-block w-100">
+                    </div>
+                    <h3 class="fs-2 text-body-emphasis">Competitive Pay
+                    </h3>
+                    <p>Earn competitive rates for your services and get paid promptly.</p>
+
+                </div>
+                <div class="feature col">
+                    <div
+                        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                        <img src="img/uil_bag.jpg" alt="" height="50px" width="50px" class="d-block w-100">
+                    </div>
+                    <h3 class="fs-2 text-body-emphasis">Growth Opportunities
+                    </h3>
+                    <p>Expand your skills and take on new challenges as our network grows.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="px-4 py-5 my-5 text-center border-bottom border-top">
+
+                <h1 class="display-5 fw-bold text-body-emphasis ">Join Our Community</h1>
+                <div class="col-lg-6 mx-auto">
+                    <p class="lead mb-4">Become a member of our platform and unlock access to passionate
+                        guides, expert drivers, and unforgettable experiences.</p>
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                        <a href="#taxi-driver"><button type="button"
+                                class="btn btn-primary btn-lg px-4 gap-3">Taxi-Driver</button></a>
+                        <a href="#guide">
+                            <button type="button" class="btn btn-outline-secondary btn-lg px-4">Guide</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container px-4 py-5">
+            <h2 class="pb-2 border-bottom" id="guide">Become a Guide</h2>
+
+            <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+                <div class="col d-flex flex-column align-items-start gap-2">
+                    <h2 class="fw-bold text-body-emphasis">Explore the World with Us</h2>
+                    <p class="text-body-secondary">Join our team of passionate guides and share your love for travel and
+                        culture with our guests. Enjoy flexible schedules, competitive pay, and opportunities for
+                        growth.
+
+                    </p>
+                    <a href="/signup" class="btn btn-primary btn-lg">Apply Now</a>
+                </div>
+
+                <div class="col">
+                    <div class="row row-cols-1 row-cols-sm-2 g-4">
+
+
+                        <img src="img/Man-in-New-York-City-gif--unscreen.gif" alt="" srcset=""
+                            style="height: auto; width: auto;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container px-4 py-5">
+            <h2 class="pb-2 border-bottom" id="taxi-driver">Become a Driver</h2>
+            <div class="row align-items-center g-4 row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+                <div class="col-md-6 d-flex flex-column align-items-start gap-2">
+                    <img src="img/Taxi Driver.gif" alt="Driver Image"
+                        style="max-width: 100%; height: auto; border-radius: 24px;">
+
+                </div>
+                <div class="col-md-6">
+                    <h2 class="fw-bold text-body-emphasis">Drive with Flexibility</h2>
+                    <p class="text-body-secondary">Become a driver with our tour and taxi services hub and enjoy the
+                        freedom of setting your own schedule. Earn competitive pay and take advantage of our support and
+                        resources.</p>
+                    <a href="/signup" class="btn btn-primary btn-lg">Apply Now</a>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+
+
+        <%- include('footer') %>
+
+</body>
+
+</html>

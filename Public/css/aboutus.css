@@ -1,0 +1,7 @@
+.btn-outline-primary:hover a {
+    color: white;
+  }
+
+  .btn:hover {
+    color: white !important;
+}

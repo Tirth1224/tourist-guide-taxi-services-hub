@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker Profile Dashboard</title>
+    <link rel="stylesheet" href="/css/workerdashboard.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> Font Awesome for icons -->
+</head>
+
+<body>
+
+    <script src="/js/workerdashboard.js"></script> <!-- JavaScript file -->
+
+    <div class="sidebar">
+        <!-- Home Icon -->
+        <div class="home-icon">
+            <a href="/index"><img src="img/dashboard/ion_home.PNG" alt=""></a>
+
+            <img src="img/capture.PNG" alt="">
+        </div>
+        <!-- User Image and Name -->
+        <div class="part-1">
+            <div class="user-image">
+                <!-- Check if user is logged in and has a profile image -->
+                <% if(user && user.profile_image) { %>
+                    <img src="<%= user.profile_image %>" alt="User Image">
+                    <% } else { %>
+                        <!-- If user is not logged in or has no profile image, display a default image -->
+                        <img src="img/dashboard/usericon2.svg" alt="Default Profile Image">
+                        <% } %>
+            </div>
+            <!-- User Name -->
+            <div class="user-name">
+                <!-- Replace 'John Doe' with the actual user's name -->
+                <p>
+                    <%= user ? user.name : 'Guest' %>
+                </p>
+            </div>
+        </div>
+        <!-- Sidebar Menu -->
+        <div class="sidebar-menu">
+            <ul>
+                <% if (user && user.role==='user' ) { %>
+                    <li><a href="/userprofile">Profile</a></li>
+                    <hr> <!-- Separator Line -->
+                    <li><a href="/userchangepassword">Password</a></li>
+                    <hr> <!-- Separator Line -->
+                    <% } else { %>
+                        <li><a href="/workerprofile">Profile</a></li>
+                        <hr> <!-- Separator Line -->
+                        <li><a href="/workerchangepassword">Password</a></li>
+                        <hr> <!-- Separator Line -->
+                        <% } %>
+                            <li><a href="/workerservice">Service request</a></li>
+                            <hr> <!-- Separator Line -->
+                            <li><a href="#">Active Services</a></li>
+                            <hr> <!-- Separator Line -->
+                            <li><a href="#">Settings</a></li>
+                            <hr> <!-- Separator Line -->
+                            <li><a href="/logout">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="profile-card">
+            <!-- Profile image -->
+            <div class="profile-image">
+                <% if(user && user.profile_image) { %>
+                    <img src="<%= user.profile_image %>" alt="User Image" id="proimg">
+                    <% } else { %>
+                        <!-- If user is not logged in or has no profile image, display a default image -->
+                        <img src="/img/dashboard/usericon.svg" alt="Default Profile Image" id="proimg">
+                        <% } %>
+                            <!-- Edit button for profile image -->
+                            <button class="edit-profile" id="changeprofileimg"><img src="img/dashboard/editicon.svg"
+                                    alt=""></button>
+                            <form id="profile-image-form" action="/api/upload-profile-image" method="post"
+                                enctype="multipart/form-data">
+                                <input type="file" id="upload-profile-img" name="profile_image" accept="image/*"
+                                    style="display: none;">
+                                <div class="image-action-buttons">
+                                    <button type="submit" class="save-button save-image-button"
+                                        style="display: none; ">Save Image</button>
+                                    <button type="button" class="cancel-button cancel-image-button"
+                                        style="display: none;">Cancel</button>
+                                </div>
+                            </form>
+            </div>
+
+            <!-- Edit button for personal information -->
+            <!-- Worker information -->
+            <div class="worker-info">
+                <div class="section-heading">
+                    Personal Information *
+                    <button class="edit-profile-info" id="changeprofileinfo"><img src="img/dashboard/editicon.svg"
+                            alt=""> Edit</button>
+                </div>
+                <div class="info-item">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" value="<%= user ? user.name : '' %>" readonly>
+                </div>
+                <div class="section-heading">Contact Information</div>
+                <div class="info-item">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" value="<%= user ? user.email : '' %>" readonly>
+                </div>
+                <div class="info-item">
+                    <label for="mobile">Mobile No:</label>
+                    <input type="text" id="mobile" value="<%= user ? user.mobile : '' %>" readonly>
+                </div>
+                <div class="info-item">
+                    <label for="profession">Profession:</label>
+                    <input type="text" id="profession" value="<%= user ? user.profession : '' %>" readonly>
+                </div>
+                <div class="info-item">
+                    <label for="experience">Experience:</label>
+                    <input type="text" id="experience" value="<%= user ? user.experience : '' %> years" readonly>
+                </div>
+                <div class="info-item">
+                    <label for="rating">Rating:</label>
+                    <% if (user.rating) { %>
+                        <input type="text" id="rating" value="<%= user.rating %> / 5" readonly>
+                        <% } else { %>
+                            <input type="text" id="rating" value="No rating yet" readonly>
+                            <% } %>
+                </div>
+
+                <div class="section-heading">Residential Information</div>
+                <div class="info-item">
+                    <label for="state">State: <%= user ? user.state : '' %> </label>
+                    <select id="state" disabled>
+                        <option value="">Select State</option>
+                    </select>
+                </div>
+                <div class="info-item">
+                    <label for="district">District: <%= user ? user.district : '' %></label>
+                    <select id="district" disabled>
+                        <option value="">Select District</option>
+                    </select>
+                </div>
+                <div class="info-item">
+                    <label for="city">City: <%= user ? user.city : '' %></label>
+                    <select id="city" disabled>
+                        <option value="">Select City</option>
+                    </select>
+                </div>
+                <div class="info-item">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" value="<%= user ? user.address : '' %>" readonly>
+                </div>
+                <div class="info-item">
+                    <label for="pincode">Pincode:</label>
+                    <input type="text" id="pin_code" value="<%= user ? user.pin_code : '' %>" readonly>
+                </div>
+                <% if (user && user.role==='taxi-driver' ) { %>
+                    <div class="info-item">
+                        <label for="licence_number">Licence Number:</label>
+                        <input type="text" id="licence_number" value="<%= user.licence_number %>" readonly>
+                    </div>
+                    <div class="info-item">
+                        <label for="vehicle_type">Vehicle Type:</label>
+                        <input type="text" id="vehicle_type" value="<%= user.vehicle_type %>" readonly>
+                    </div>
+                    <div class="info-item">
+                        <label for="rc">RC Book Number:</label>
+                        <input type="text" id="rc" value="<%= user.rc %>" readonly>
+                    </div>
+                    <div class="info-item">
+                        <label for="vehicle_number">Vehicle Number:</label>
+                        <input type="text" id="vehicle_number" value="<%= user.vehicle_number %>" readonly>
+                    </div>
+                    <% } %>
+
+                        <div class="info-item">
+                            <label for="aadhar_number">Aadhar Number:</label>
+                            <input type="text" id="aadhar_number" value="<%= user ? user.aadhar_number : '' %>"
+                                readonly>
+                        </div>
+                        <div class="info-item">
+                            <label for="pancard_number">Pan Card Number:</label>
+                            <input type="text" id="pancard_number" value="<%= user ? user.pancard_number : '' %>"
+                                readonly>
+                        </div>
+            </div>
+
+
+            <!-- Save and cancel buttons for user information editing (existing buttons) -->
+            <div class="action-buttons">
+                <button class="save-button save-info-button">Save Info</button>
+                <button class="cancel-button cancel-info-button">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

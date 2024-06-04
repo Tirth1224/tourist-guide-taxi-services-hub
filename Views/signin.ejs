@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/signin.css">
+    <title>Guide-wheels</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-in">
+            <form id="signup-form" action="/signin" method="POST">
+                <h1>Sign In</h1><br>
+
+                <select id="user-type-login" name="role">
+                    <option value="customer">Customer</option>
+                    <option value="tour-guide">Guide</option>
+                    <option value="taxi-driver">Taxi Driver</option>
+                </select>
+                <!-- <div class="form-group">
+                    <select name="role" class="margin role" id="role" required onchange="toggleProfessionDropdown()">
+                        <option value="user">User</option>
+                        <option value="worker">Worker</option>
+                    </select>
+                </div>
+                <div class="form-group" id="profession-group" style="display: none;">
+                    <select name="profession" class="margin role" id="profession">
+                        <option value="taxi-driver">Taxi Driver</option>
+                        <option value="tour-guide">Guide</option>
+                    </select>
+                </div> -->
+                <input type="email" name="email" placeholder="Email" id="user-email-login">
+                <input type="password" name="password" placeholder="Password" id="user-password-login">
+                <a href="#" id="forgot">Forget Your Password?</a>
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Register with your personal details to use all of site features</p>
+                    <button class="hidden" id="register">Sign UP</button>
+                </div>
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter your personal details to use all of site features</p>
+                    <button class="hidden" id="login">Sign IN</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/sscript.js"></script>
+    <div id="forgot-password-overlay" class="overlay">
+        <!-- Include forgotpassword.ejs content here -->
+        <%- include ('forgotpassword') %>
+    </div>
+</body>
+
+</html>

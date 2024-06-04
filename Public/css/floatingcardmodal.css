@@ -1,0 +1,135 @@
+/* Floating Card Modal */
+.floating-card-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .floating-card-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 400px;
+    position: relative;
+  }
+  
+  .floating-card-close {
+    color: #aaa;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .floating-card-close:hover,
+  .floating-card-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #taskForm {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  #taskForm .form-group label {
+    font-weight: bold;
+  }
+  
+  textarea,
+  input[type="date"],
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 8px 0px;
+    box-sizing: border-box;
+    max-width: 99%;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #5a99ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    max-width: 99%;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #2c5dad;
+  }
+  
+  .terms {
+    margin-top: 20px;
+    max-width: 99%;
+    padding: 2px;
+  }
+  
+  .terms h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .terms ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  .terms li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .terms label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-top: 0;
+    text-align: justify; /* Ensures the label text is justified */
+  }
+  
+  .terms input[type="checkbox"] {
+    margin-right: 10px;
+    margin-top: 2px;
+  }
+  
+  #step2 button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: #5a99ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #step2 button:hover {
+    background-color: #2c5dad;
+  }
+  

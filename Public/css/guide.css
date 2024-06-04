@@ -1,0 +1,341 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  background-color: #ffffff;
+  font-size: 16px;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #343a40;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.logo img {
+  height: auto;
+  width: 180px;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+.navbar nav ul li {
+  margin: 0 20px;
+  position: relative;
+}
+
+.navbar nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar nav ul li a:hover,
+.navbar nav ul li a.active {
+  color: #ddd;
+  font-weight: 900;
+}
+
+.navbar nav ul li .dropdown {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  min-width: 150px;
+  padding: 10px;
+  top: 30px;
+  left: 0;
+  z-index: 999;
+}
+
+.navbar nav ul li:hover .dropdown {
+  display: block;
+}
+
+.navbar nav ul li .dropdown a {
+  display: block;
+  color: #333333;
+  font-size: 14px;
+  padding: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.navbar nav ul li .dropdown a:hover {
+  background-color: #f5f5f5;
+}
+
+/* Carousel Styles */
+.myCarousel {
+  height: 61vh;
+}
+
+@media screen and (min-width: 1400px) {
+  .myCarousel {
+    height: 80vh;
+  }
+}
+
+.carousel-item {
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.top-caption {
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translateY(8.5%);
+  text-align: center;
+}
+
+
+.form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+label {
+  width: 100px;
+  text-align: right;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.sublabel {
+  color:gray; 
+  margin:4px; 
+  font-size: 11px;
+}
+
+input[type="text"],
+input[type="date"] {
+  padding: 10px;
+  font-size: 14px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #0050A0;
+  border: none;
+  cursor: pointer;
+}
+
+.custom-bg {
+  background-color: #F7F7F9;
+}
+
+.shadow-sm img {
+  border-radius: 0 !important;
+}
+
+
+
+
+/* Services Section */
+.container.my-5 {
+  background-color: #B8B8FF;
+  border-radius: 24px;
+  padding: 0.7rem;
+}
+
+.container.my-5 h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form Section */
+.selection-form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.selection-form select,
+.selection-form button {
+  flex-grow: 1;
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+  max-width: 200px; /* Optional: Limit the max width of each item */
+}
+
+.selection-form button {
+  background-color: #007bff;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.selection-form select:focus,
+.selection-form button:focus {
+  outline: none;
+  border: 2px solid #0056b3;
+}
+
+.selection-form button:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Worker Cards */
+.worker-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.worker-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.worker-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.worker-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.info {
+  padding: 20px;
+  min-height: 220px; /* Adjust this value as needed */
+}
+
+.name {
+  margin: 10px 0;
+  font-size: 24px;
+}
+
+.profession {
+  margin: 5px 0;
+  color: #666;
+}
+
+.location {
+  margin: 5px 0;
+  color: #666;
+}
+
+.rating {
+  margin: 5px 0;
+  color: #666;
+}
+
+/* Select Button */
+.select-button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.select-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .worker-cards {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .worker-card {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .worker-card img {
+    height: 150px;
+  }
+
+  .info {
+    padding: 10px;
+  }
+
+  .name {
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
+
+  .profession {
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+
+  .location {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .rating {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .select-button {
+    padding: 8px 0;
+    font-size: 14px;
+  }
+
+  .no-workers-container2 {
+    margin: 20px;
+    height: auto;
+  }
+
+  .no-workers-container2 img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}

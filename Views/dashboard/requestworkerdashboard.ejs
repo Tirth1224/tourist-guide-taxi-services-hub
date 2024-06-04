@@ -1,0 +1,127 @@
+document.addEventListener('DOMContentLoaded', function () {
+fetch('/api/worker-requests')
+.then(response => response.json())
+.then(requests => {
+const requestSection = document.getElementById('worker-requests');
+requestSection.innerHTML = '';
+requests.forEach(request => {
+const requestCard = `
+<div class="request-card">
+    <h4>${request.userName}</h4>
+    <p>Email: ${request.userEmail}</p>
+    <p>Mobile: ${request.userMobile}</p>
+    <p>Task Details: ${request.task_details}</p>
+    <button class="accept-request" data-id="${request.id}">Accept</button>
+    <button class="reject-request" data-id="${request.id}">Reject</button>
+</div>
+`;
+requestSection.innerHTML += requestCard;
+});
+
+document.querySelectorAll('.accept-request').forEach(button => {
+button.addEventListener('click', function () {
+const appointmentId = this.getAttribute('data-id');
+fetch('/api/accept-appointment', {
+method: 'POST',
+headers: {
+'Content-Type': 'application/json'
+},
+body: JSON.stringify({ appointmentId })
+})
+.then(response => {
+if (!response.ok) {
+throw new Error('Failed to accept appointment');
+}
+return response.json();
+})
+.then(data => {
+alert('Appointment accepted successfully');
+location.reload(); // Refresh to update the list
+})
+.catch(error => {
+console.error('Error accepting appointment:', error);
+alert('Failed to accept appointment. Please try again.');
+});
+});
+});
+
+document.querySelectorAll('.reject-request').forEach(button => {
+button.addEventListener('click', function () {
+const appointmentId = this.getAttribute('data-id');
+fetch('/api/reject-appointment', {
+method: 'POST',
+headers: {
+'Content-Type': 'application/json'
+},
+body: JSON.stringify({ appointmentId })
+})
+.then(response => {
+if (!response.ok) {
+throw new Error('Failed to reject appointment');
+}
+return response.json();
+})
+.then(data => {
+alert('Appointment rejected successfully');
+location.reload(); // Refresh to update the list
+})
+.catch(error => {
+console.error('Error rejecting appointment:', error);
+alert('Failed to reject appointment. Please try again.');
+});
+});
+});
+})
+.catch(error => {
+console.error('Error fetching requests:', error);
+});
+
+fetch('/api/worker-appointments')
+.then(response => response.json())
+.then(appointments => {
+const appointmentSection = document.getElementById('worker-appointments');
+appointmentSection.innerHTML = '';
+appointments.forEach(appointment => {
+const appointmentCard = `
+<div class="appointment-card">
+    <h4>${appointment.userName}</h4>
+    <p>Email: ${appointment.userEmail}</p>
+    <p>Mobile: ${appointment.userMobile}</p>
+    <p>Task Details: ${appointment.task_details}</p>
+    <button class="cancel-appointment" data-id="${appointment.id}">Cancel</button>
+</div>
+`;
+appointmentSection.innerHTML += appointmentCard;
+});
+
+document.querySelectorAll('.cancel-appointment').forEach(button => {
+button.addEventListener('click', function () {
+const appointmentId = this.getAttribute('data-id');
+fetch('/api/cancel-appointment', {
+method: 'POST',
+headers: {
+'Content-Type': 'application/json'
+},
+body: JSON.stringify({ appointmentId })
+})
+.then(response => {
+if (!response.ok) {
+throw new Error('Failed to cancel appointment');
+}
+return response.json();
+})
+.then(data => {
+alert('Appointment cancelled successfully');
+location.reload(); // Refresh to update the list
+})
+.catch(error => {
+console.error('Error cancelling appointment:', error);
+alert('Failed to cancel appointment. Please try again.');
+});
+});
+});
+})
+.catch(error => {
+console.error('Error fetching appointments:', error);
+});
+});

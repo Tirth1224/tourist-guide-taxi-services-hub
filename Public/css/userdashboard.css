@@ -1,0 +1,490 @@
+/* Reset CSS
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  .part-1 {
+    margin-top: 25px;
+    margin-bottom: 50px;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 18%;
+    background-color: #B8B8FF;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .user-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .user-image img {
+    width: 150px;
+    height: 150px;
+    padding: 3px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+  }
+  
+  .user-name p {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #000
+  }
+  
+  .sidebar-menu ul {
+    list-style-type: none;
+  }
+  
+  .sidebar-menu ul li {
+    margin: 15px;
+    text-align: center;
+  }
+  
+  .sidebar-menu ul li a {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+  }
+  
+  .sidebar-menu ul li hr {
+    border: none;
+    border-top: 1px solid #aaa;
+    margin: 15px 0;
+  }
+  
+  .main-content {
+    margin-left: 18%;
+  }
+  
+  .profile-card {
+    margin: 20px auto;
+    width: 70%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-image {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .profile-image #proimg {
+    width: 150px;
+    height: 150px;
+    padding: 3px;
+    border-radius: 50%;
+    border: 1px solid #000;
+  }
+  
+  .edit-profile {
+    position: relative;
+    bottom: 30px;
+    right: 30px;
+    text-align: center;
+    padding: 2px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .edit-profile img {
+    width: 27px; 
+    height: 27px; 
+    vertical-align: middle;
+  }
+  
+  .user-info {
+    padding: 10px;
+  }
+  
+  .section-heading {
+    display: flex;
+    width: calc(100% - 20px);
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .edit-profile-info {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px 10px;
+    border:1px solid #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .edit-profile-info img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+  
+  .edit-profile-info:hover {
+    background-color: #cccccc;
+  }
+  
+  .info-item {
+    margin-bottom: 20px;
+  }
+  
+  .info-item label {
+    font-weight: bold;
+  }
+  
+  .info-item input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+  }
+  
+  
+  .action-buttons {
+    text-align: right;
+    margin-top: 20px;
+  }
+  
+  .save-info-button,
+  .cancel-info-button {
+    display: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .save-info-button:hover,
+  .cancel-info-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .image-action-buttons {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .image-action-buttons .save-button,
+  .image-action-buttons .cancel-button,
+  .save-image-button,
+  .cancel-image-button {
+    display: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .save-image-button:hover,
+  .cancel-image-button:hover,
+  .save-button:hover,
+  .cancel-button:hover {
+    background-color: #0056b3;
+  }
+   */
+
+   /* Reset CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.part-1 {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 20%;
+  background-color: #B8B8FF;
+  padding: 20px;
+  color: #fff;
+}
+
+.user-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.home-icon {
+  display: flex;
+  align-items: center;
+}
+
+.home-icon img {
+  height: auto;
+  max-width: 80%; /* Adjust the width as needed */
+  border-radius: 24px;
+  margin-right: 10px; /* Adjust the spacing between the images */
+  padding: 1px;
+}
+
+.user-image img {
+  width: 150px;
+  height: 150px;
+  padding: 3px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 1px solid #fff;
+}
+
+.user-name p {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #000
+}
+
+.sidebar-menu ul {
+  list-style-type: none;
+}
+
+.sidebar-menu ul li {
+  margin: 15px;
+  text-align: center;
+}
+
+.sidebar-menu ul li a {
+  text-decoration: none;
+  color: #000000;
+  display: block;
+}
+
+.sidebar-menu ul li hr {
+  border: none;
+  border-top: 1px solid #aaa;
+  margin: 15px 0;
+}
+
+.main-content {
+  margin-left: 18%;
+}
+
+.profile-card {
+  margin: 20px auto;
+  width: 70%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.profile-image #proimg {
+  width: 150px;
+  height: 150px;
+  padding: 3px;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.edit-profile {
+  position: relative;
+  bottom: 30px;
+  right: 30px;
+  text-align: center;
+  padding: 2px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-profile img {
+  width: 27px; 
+  height: 27px; 
+  vertical-align: middle;
+}
+
+.user-info {
+  padding: 10px;
+}
+
+.section-heading {
+  display: flex;
+  width: calc(100% - 20px);
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.edit-profile-info {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 5px 10px;
+  border:1px solid #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.edit-profile-info img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.edit-profile-info:hover {
+  background-color: #cccccc;
+}
+
+.info-item {
+  margin-bottom: 20px;
+}
+
+.info-item label {
+  font-weight: bold;
+}
+
+.info-item input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-top: 5px;
+}
+
+/* Action buttons for user information editing */
+.action-buttons {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.save-info-button,
+.cancel-info-button {
+  display: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-info-button:hover,
+.cancel-info-button:hover {
+  background-color: #0056b3;
+}
+
+/* Additional styling for image editing */
+.image-action-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.image-action-buttons .save-button,
+.image-action-buttons .cancel-button,
+.save-image-button,
+.cancel-image-button {
+  display: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-image-button:hover,
+.cancel-image-button:hover,
+.save-button:hover,
+.cancel-button:hover {
+  background-color: #0056b3;
+}
+
+/* Media queries for responsiveness */
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+  .sidebar {
+      width: 25%;
+  }
+  
+  .main-content {
+      margin-left: 25%;
+  }
+
+  .profile-card {
+      width: 90%;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+  .sidebar {
+      display: none;
+  }
+  
+  .main-content {
+      margin-left: 0;
+  }
+
+  .profile-card {
+      width: 100%;
+      padding: 10px;
+  }
+  
+  .profile-image img {
+      width: 100%;
+  }
+
+  .user-name p {
+      font-size: 1rem;
+  }
+}

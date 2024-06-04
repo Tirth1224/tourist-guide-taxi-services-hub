@@ -1,0 +1,231 @@
+/* Base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    color: #333;
+}
+
+.part-1 {
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 20%;
+    background-color: #B8B8FF; /* Sidebar background */
+    padding: 20px;
+    color: #fff;
+    overflow-y: auto;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit browsers (such as Chrome and Safari) */
+}
+
+.user-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.home-icon {
+    display: flex;
+    align-items: center;
+  }
+  
+  .home-icon img {
+    height: auto;
+    max-width: 80%;
+    border-radius: 24px;
+    margin-right: 10px;
+    padding: 1px;
+  }
+.user-image img {
+    width: 150px;
+    height: 150px;
+    padding: 3px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+    object-fit: cover; /* Ensure image covers the container */
+}
+
+.user-name p {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #000;
+}
+
+/* Sidebar menu styles */
+.sidebar-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-menu ul li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.sidebar-menu ul li a {
+    text-decoration: none;
+    color: #000; /* Update text color */
+    display: block;
+    padding: 10px;
+    border-radius: 5px; /* Add border-radius for smoother design */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.sidebar-menu ul li a:hover {
+    background-color: #aaa; /* Hover effect */
+}
+
+.sidebar-menu ul li hr {
+    border: none;
+    border-top: 1px solid #aaa;
+    margin: 10px 0;
+}
+
+.main-content {
+    margin-left: 20%;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style for the service items */
+.service-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: box-shadow 0.3s; /* Smooth box-shadow transition */
+}
+
+.service-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hover effect */
+}
+
+/* Style for the service item heading */
+.service-item h3 {
+    color: #333333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Style for the user details section */
+.user-details {
+    margin-top: 15px;
+}
+
+/* Style for user details paragraph */
+.user-details p {
+    margin-bottom: 5px;
+}
+
+/* Style for the service details section */
+.service-details {
+    margin-top: 15px;
+}
+
+/* Style for service details paragraph */
+.service-details p {
+    margin-bottom: 5px;
+}
+
+/* Style for the status paragraph */
+.status {
+    margin-bottom: 5px;
+    font-weight: bold; /* Make status more prominent */
+}
+
+/* Style for the action buttons */
+.action-buttons {
+    margin-top: 10px;
+}
+
+.accept-button,
+.reject-button,
+.cancel-button {
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+    font-size: 1rem; /* Make text size consistent */
+    display: inline-block; /* Ensure proper alignment */
+}
+
+.reject-button,
+.cancel-button {
+    background-color: #f44336;
+}
+
+.accept-button:hover {
+    background-color: #388e3c;
+}
+
+.reject-button:hover,
+.cancel-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+    
+    .service-item {
+        padding: 10px;
+    }
+    
+    .user-image img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar-menu ul li {
+        margin: 5px 0;
+    }
+    
+    .sidebar-menu ul li a {
+        padding: 8px;
+    }
+    
+    .accept-button,
+    .reject-button,
+    .cancel-button {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}

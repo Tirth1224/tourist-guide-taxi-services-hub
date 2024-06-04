@@ -1,0 +1,218 @@
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  .part-1 {
+    margin-top: 25px;
+    margin-bottom: 50px;
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 20%;
+    background-color: #B8B8FF;
+    padding: 20px;
+    color: #fff;
+    overflow-y: auto;
+  }
+  
+  .sidebar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .home-icon {
+    display: flex;
+    align-items: center; /* Added padding */
+  }
+  
+  .home-icon img {
+    height: auto;
+    max-width: 80%;
+    border-radius: 24px;
+    margin-right: 10px;
+    padding: 1px;
+  }
+  
+  .user-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .user-image img {
+    width: 150px;
+    height: 150px;
+    padding: 3px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+  }
+  
+  .user-name p {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #000;
+  }
+  
+  .sidebar-menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar-menu ul li {
+    margin: 15px;
+    text-align: center;
+  }
+  
+  .sidebar-menu ul li a {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+  }
+  
+  .sidebar-menu ul li hr {
+    border: none;
+    border-top: 1px solid #aaa;
+    margin: 15px 0;
+  }
+  
+  .main-content {
+    margin-left: 20%;
+    padding: 20px;
+  }
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style for the service items */
+.service-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+/* Style for the service item heading */
+.service-item h3 {
+    color: #333333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Style for the worker details section */
+.worker-details {
+    margin-top: 15px;
+}
+
+/* Style for worker details paragraph */
+.worker-details p {
+    margin-bottom: 5px;
+}
+
+/* Style for the description paragraph */
+.service-item p {
+    margin-bottom: 10px;
+}
+
+/* Style for the status paragraph */
+.status {
+    margin-bottom: 5px;
+}
+
+
+/* Style for the cancel button */
+.cancel-button{
+    background-color: #f44336;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+
+.cancel-button:hover {
+    background-color: #d32f2f;
+}
+
+  .service-dashboard {
+    margin-top: 40px;
+  }
+  
+  .section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+  }
+  
+  .service-list {
+    margin-top: 20px;
+  }
+  
+  .service-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+  }
+  
+  .service-item .service-info p {
+    margin-bottom: 5px;
+  }
+  
+  .cancel-service-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cancel-service-button:hover {
+    background-color: #c82333;
+  }
+  
+  /* Media queries for responsiveness */
+  
+  @media screen and (max-width: 768px) {
+    .sidebar {
+      width: 25%;
+    }
+  
+    .main-content {
+      margin-left: 25%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .sidebar {
+      display: none;
+    }
+  
+    .main-content {
+      margin-left: 0;
+    }
+  }
+  
