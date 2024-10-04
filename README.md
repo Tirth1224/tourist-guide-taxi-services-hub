@@ -50,7 +50,7 @@ To install and run the project locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/tourist-guide-taxi-services-hub.git
+   git clone https://github.com/Tirth1224/tourist-guide-taxi-services-hub.git
    ```
 
 2. **Navigate to the project directory**:
